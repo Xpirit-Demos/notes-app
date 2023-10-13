@@ -21,6 +21,8 @@ jobs:
         uses: aquasecurity/tfsec-action@v1.0.3
         with: 
           format: sarif
-      - shell: bash
-        run: ls
+      - uses: actions/upload-artifact@v3
+        with:
+          name: tfsec-output
+          path: .
             
